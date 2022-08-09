@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
       }
     )
   }
-
   submitForms(){
     console.log(this.hasErro)
     if(!this.loginService.checkCadastro(this.formLogin.value)){

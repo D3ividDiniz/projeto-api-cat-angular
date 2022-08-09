@@ -18,9 +18,4 @@ export class Step1LoginComponent implements OnInit {
       localStorage.setItem('Users', '{}')
     }
   }
-  loginGoogle(){
-
-  }
-
-
 }

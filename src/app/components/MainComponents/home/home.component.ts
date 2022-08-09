@@ -31,7 +31,6 @@ export class MainHomeComponent implements OnInit{
     this.charging = true;
     this.hasErro['tof'] = false;
   }
-
   getCatsInitialized(): void{
     this.ids = [];
     this.serviceHome.getCatImg(this.filterValue).subscribe(res=>{
@@ -46,7 +45,6 @@ export class MainHomeComponent implements OnInit{
       this.imgs = res
     });
   }
-
   favorite(imgData:info_img){
     // check saves existing
     if(!localStorage.getItem('saves'))
@@ -67,14 +65,10 @@ export class MainHomeComponent implements OnInit{
       localStorage.setItem('saves', JSON.stringify(localImgDataFav));
     }
   }
-
-
-
   @HostListener('window:scroll')
   onWindowScroll():void{
     if( document.documentElement.scrollTop + document.documentElement.clientHeight > document.documentElement.scrollHeight - 20 ){
       this.serviceHome.getCatImg(this.filterValue).subscribe(res=>{
-        let cont = 0;
 
         res.forEach(cat=>{
 
@@ -87,15 +81,5 @@ export class MainHomeComponent implements OnInit{
             cat['description'] = descLocal;
             this.imgs.push(cat);
             this.ids.push(cat.id);
-          })};
-      }
-      )
-      if(cont>1 || this.imgs.length < 10){
-        this.hasErro = this.loginService.showError('Acabou-se os gatos :/');
-        this.charging = false;
-      }
-  })
-  }
-
-}
+          })};})})}}
 }

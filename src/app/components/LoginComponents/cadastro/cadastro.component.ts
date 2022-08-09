@@ -15,6 +15,7 @@ export class CadastroComponent implements OnInit {
   ngOnInit(): void {
     this.createCadastro();
   }
+
   hasErro: any =  {err: '', tof: false};
   formCadastro: FormGroup ;
 
@@ -23,7 +24,7 @@ export class CadastroComponent implements OnInit {
       {
         nome: ['', [Validators.required, Validators.minLength(3)]],
         email: ['', [Validators.required, Validators.email]],
-        senha: ['', [Validators.pattern(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$*&@#])(?:([0-9a-zA-Z$*&@#])(?!\1)){8,}$/)]]
+        senha: ['', [Validators.pattern(/^.*(?=.{8,})(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).*$/)]]
       }
     )
   }
