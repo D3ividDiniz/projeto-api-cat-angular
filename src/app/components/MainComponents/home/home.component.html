@@ -1,0 +1,40 @@
+
+<mat-form-field appearance="fill" class="primary__input-raca">
+  <mat-label>Filtro</mat-label>
+  <mat-select [(ngModel)]="filterValue">
+    <mat-option *ngFor="let raca of filterOption" [value]="raca.id">
+      {{ raca.name }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+<button  class="primary__btn-raca" (click)="updateFilter()">Filtrar > </button>
+<btn-scroll></btn-scroll>
+<simple-alert
+  [errValue]="hasErro.err"
+  *ngIf="hasErro.tof"
+  style="z-index: 1000"
+></simple-alert>
+<appHeader></appHeader>
+<div>
+  <div *ngFor="let img of imgs" class="catCard">
+    <mat-card class="example-card">
+      <img mat-card-image src="{{ img.url }}" alt="Photo of a Shiba Inu" />
+      <div class="mat-card-div__bottom-details">
+        <mat-icon
+          [ngClass]=""
+          (click)="favorite({ id: img.id, url: img.url })"
+          class="mat-card-div__like"
+          aria-hidden="false"
+          aria-label="Example icon"
+          >favorite
+        </mat-icon>
+      </div>
+      <div routerLink="detalhes/{{ img.id }}" class="catCard__ver-mais">
+        <span class="ver-mais__description">{{ img.description }}</span
+        >...<br /><strong>Ver Mais</strong>
+      </div>
+    </mat-card>
+  </div>
+</div>
+
+<mat-progress-bar mode="query"></mat-progress-bar>

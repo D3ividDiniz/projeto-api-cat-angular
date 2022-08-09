@@ -1,0 +1,32 @@
+@use '../../../../styles'
+
+img
+  width: 150px
+  margin: 0.4rem 1rem
+  cursor: pointer
+header
+  @include styles.flex(space-between, row)
+  background-color: styles.$main-color
+  color: styles.$second-color
+  box-shadow: styles.$box-shadow
+  box-sizing: border-box
+  border-radius: 0 0 1rem 1rem
+  position: fixed
+  top: 0
+  z-index: 20
+  width: 100%
+  height: 6rem
+nav > ul, li
+  @include styles.flex(center, row)
+  list-style: none
+  gap: 1.2rem
+  padding: 0 1.0rem
+li
+  margin: 0 1.6rem 0 1.6rem
+  cursor: pointer
+  padding: 0 0 4px 0
+li:hover
+  color: #23A2CC
+  margin-bottom: 0.4rem
+  transition: 0.3s
+

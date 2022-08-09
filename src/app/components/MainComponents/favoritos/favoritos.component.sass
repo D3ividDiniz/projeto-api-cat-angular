@@ -1,0 +1,50 @@
+@use '../../../../styles'
+.img
+  background-size: cover
+  height: 100%
+  background-position: center
+
+.example-card
+  height: 30rem
+  border-radius:1.6rem
+  padding: 0
+  background-color: transparent
+  justify-content: center
+  margin:2rem 0
+  box-shadow: styles.$box-shadow
+  transition: 0.4s
+
+.mat-card-div__bottom-details
+  height: 4rem
+  @include styles.flex(left, row)
+  padding: 0 0 0 1.6rem
+  position: absolute
+  top:0
+
+.catCard__ver-mais
+  opacity: 0
+  position: absolute
+  background-color: rgba(0, 0, 0, 0.4)
+  height: 100%
+  width: 100%
+  top: 0
+  transition: 0.4s
+  color: white
+  @include styles.flex(center, row)
+.catCard__ver-mais:hover
+  opacity: 1
+  transition: 0.3s
+.mat-card-div__like
+  z-index: 10
+  color: #f1f
+.mat-card-div__like:hover
+  cursor: pointer
+  color: styles.$main-color
+.body-div__catsCardsGroup
+  display: grid
+  width: 100%
+  box-sizing: border-box
+  gap: 3.2rem
+  padding: 0 20rem
+  flex: wrap
+  grid-template-columns: repeat(auto-fill, minmax(30%, 1fr))

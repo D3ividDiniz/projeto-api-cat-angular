@@ -1,0 +1,17 @@
+@use '../../../../styles'
+
+.container__erro-alert
+    background-image: linear-gradient(#f84b4b, #ff5353)
+    position: fixed
+    z-index: 3
+    left: calc( 50% - 15rem )
+    color: #7a0000
+    @include styles.flex(center, row)
+    height: 4rem
+    width: 30rem
+    border-radius: 10px
+    box-shadow: styles.$box-shadow
+    top: 1.6rem
+    letter-spacing: 2px
+    transition: 1s
+

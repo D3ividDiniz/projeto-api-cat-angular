@@ -1,0 +1,30 @@
+@use '../../../../styles'
+
+.container__login
+  @include styles.flex(space-between,row)
+  width: 100vw
+
+.container-div__background
+  width: 70vw
+  background-image: url("../../../../assets/cad_img2.png")
+  height: 100vh
+  margin: 0
+  background-size: cover
+
+.cadastro__form
+  height: 100vh
+  width: 30vw
+  @include styles.flex(center , row)
+
+.box-center-medium
+  background-color: styles.$second-color
+  width: 35rem
+  height: 45rem
+  box-shadow: styles.$box-shadow
+  background-image: linear-gradient(#ffffff, #eaf5ff)
+  padding: 8rem 4rem
+  box-sizing: border-box
+  border-radius: 10px
+
+input
+  width: 30rem

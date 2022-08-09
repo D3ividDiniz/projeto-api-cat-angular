@@ -1,0 +1,31 @@
+<alert-erro [errValue]="hasErro.err" *ngIf="hasErro.tof"></alert-erro>
+<!--  -->
+<div class="container__login">
+    <div class="container-div__background">
+    </div>
+    <div  class="cadastro__form">
+        <form (submit)="submitForms()" [formGroup]="formLogin" class="box-center-medium">
+            <h1 class="medium__title">Login</h1>
+            <span><a class="sides-box__span-text" routerLink="/cadastro">Ainda não é cadastrado?</a></span>
+          <p>
+              <mat-form-field style="width: 100%;" appearance="legacy">
+                <mat-label>E-mail</mat-label>
+                <input formControlName="email" matInput placeholder="Placeholder">
+                <mat-hint>Digite seu e-mail principal.</mat-hint>
+              </mat-form-field>
+          </p>
+          <p>
+              <mat-form-field style="width: 100%;"  appearance="legacy">
+                <mat-label>Senha</mat-label>
+                <input type="password" formControlName="senha" matInput placeholder="Placeholder">
+                <mat-hint>A senha deve conter - */?, 123, aA</mat-hint>
+              </mat-form-field>
+          </p>
+
+          <a ><button class="btn-primary" type="submit"  _ngcontent-sel-c161="" mat-raised-button="" ><span class="mat-button-wrapper">Finalizar</span><span matripple="" class="mat-ripple mat-button-ripple"></span><span class="mat-button-focus-overlay "></span></button></a>
+
+        </form>
+    </div>
+</div>
+
+

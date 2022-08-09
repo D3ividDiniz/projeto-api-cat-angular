@@ -1,0 +1,16 @@
+<appHeader></appHeader>
+<div *ngIf="dataLoaded" class="catCard">
+<mat-card>
+  <mat-card-header>
+    <mat-card-title>{{dataCatInfo.breeds[0].name}} </mat-card-title>
+  </mat-card-header>
+  <img mat-card-image src="https://cdn2.thecatapi.com/images/{{imgDetail}}.jpg" alt="Photo of a Shiba Inu">
+  <mat-card-content>
+    <p class="mat-card-mat-card-content__block"><strong>Descrição</strong><br>{{dataCatInfo.breeds[0].description}}</p>
+    <p class="mat-card-mat-card-content__block"><strong>Temperamento</strong><br>{{dataCatInfo.breeds[0].temperament}}</p>
+    <p class="mat-card-mat-card-content__block"><strong>Energia</strong><br>{{dataCatInfo.breeds[0].energy_level}}</p>
+    <p class="mat-card-mat-card-content__block"><strong>Social</strong><br>{{dataCatInfo.breeds[0].social_needs}}</p>
+    <p class="mat-card-mat-card-content__block"></p>
+  </mat-card-content>
+</mat-card>
+</div>

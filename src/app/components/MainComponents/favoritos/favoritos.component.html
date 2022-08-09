@@ -1,0 +1,11 @@
+<appHeader></appHeader>
+<div class="body-div__catsCardsGroup">
+  <mat-card   *ngFor="let img of imgFavData" class="example-card">
+    <div class="img" style="background-image: url('{{img.url}}');"></div>
+      <div class="mat-card-div__bottom-details">
+        <mat-icon (click)="tirarFav(img.id)" class="mat-card-div__like" aria-hidden="false" aria-label="Example home icon">favorite
+        </mat-icon>
+      </div>
+  <div routerLink="/home/detalhes/{{img.id}}" class="catCard__ver-mais">Ver Mais</div>
+</mat-card>
+</div>
